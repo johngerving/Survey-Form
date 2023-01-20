@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Refund Request</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Refund Request</h1>
+    <p id="description"><em>Please fill out this form to request a refund.</em></p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name">Name <input type="text" id="name" name="name" placeholder="Enter your name" required></label>
+        <label id="email-label" for="email">Email <input type="email" id="email" name="email" placeholder="Enter your email" required></label>
+        <label id="number-label" for="number">Product ID <input type="number" id="number" name="number" min=1 max=999 placeholder="Enter your product ID"></label>
+      </fieldset>
+      <fieldset>
+        <label for="dropdown">Why are you returning this product?
+          <select id="dropdown">
+            <option value="">(select one)</option>
+            <option value="1">Wrong item</option>
+            <option value="2">Item did not work as expected</option>
+            <option value="3">Other</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <p id="purchase-method-question">How did you purchase this product?</p>
+        <label for="in-store"><input class="inline" type="radio" id="in-store" value="in-store" name="purchase-method"> In-Store</label>
+        <label for="online"><input class="inline" type="radio" id="online" value="online" name="purchase-method"> Online</label>
+      </fieldset>
+      <fieldset>
+        <label for="has-invoice"><input class="inline" type="checkbox" id="has-invoice" value="has-invoice"> Do you have the invoice?</label>
+        <label for="read-policy"><input class="inline" type="checkbox" id="read-policy" value="read-policy"> Have you read the refund policy?</label>
+      </fieldset>
+      <fieldset>
+        <label for="additional-comments">Additional Comments<textarea id="additional-comments" name="additional-comments" rows=5 cols=30></textarea></label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit">
+    </form>
+  </body>
+</html>
